@@ -1,6 +1,8 @@
 import React from 'react';
 import { Facebook, Instagram, Twitter } from 'lucide-react';
 import './Footer.scss';
+import img from '../assets/Name=Logo, On-Dark=True, State=Desktop.png';
+
 
 const Footer = () => {
   return (
@@ -8,7 +10,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-top">
           <div className="footer-logo">
-            <h2>OASIS</h2>
+            <h2><img src={img} alt="Oasis Logo"/></h2>
             <p>Modern & Contemporary Home Decor</p>
             <div className="social-links">
               <a href="#" className="social-link">
