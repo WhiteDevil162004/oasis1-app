@@ -12,7 +12,7 @@ const Header = () => {
       <nav className="header__nav">
         <div onClick={() => Navigate("/")} className="header__nav-item">Home</div>
         <div onClick={() => Navigate("/shop")} className="header__nav-item">Shop</div>
-        <div  className="header__nav-item">Categories</div>
+        <div onClick={() => Navigate("/categories")} className="header__nav-item">Categories</div>
         <div onClick={() => Navigate("/blog")} className="header__nav-item">Blog</div>
       </nav>
       <div className="header__cart">
