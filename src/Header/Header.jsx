@@ -2,11 +2,14 @@ import React from 'react';
 import './Header.scss';
 import img from '../assets/Name=Logo, On-Dark=False, State=Desktop.png';
 import { useNavigate } from "react-router-dom";
+import ScrollToTop from 'react-scroll-to-top';
 
 const Header = () => {
   const Navigate = useNavigate()
 
   return (
+    <>
+    <ScrollToTop smooth/>
     <header className="header">
       <div class="header__logo"><img src={img} alt="Oasis Logo"/></div>
       <nav className="header__nav">
@@ -23,6 +26,7 @@ const Header = () => {
         <button className="get-started">Get Started</button>
       </div>
     </header>
+    </>
   );
 };
 
