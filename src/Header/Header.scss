@@ -28,11 +28,12 @@
   &__cart {
     display: flex;
     align-items: center;
-
+    
     &__cart-icon {
       position: relative;
       margin-right: 15px;
-
+      cursor: pointer; 
+      
       &-count {
         position: absolute;
         top: -5px;
@@ -43,22 +44,75 @@
         padding: 2px 6px;
         font-size: 12px;
       }
+      svg {
+        vertical-align: middle; 
+      }
     }
 
     .get-started {
-      background-color:#5b54d9;
+      background-color: #5b54d9;
       color: white;
       border: none;
       padding: 10px 15px;
-      border-radius: 5px;
+      border-radius: 10px;
       cursor: pointer;
-    }
 
       &:hover {
-        background-color: #5b54d9;
+        background-color: #4a4cbf; 
       }
     }
   }
+}
+
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: -600px; 
+  width: 550px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto; 
+
+  &.open {
+    right: 0; 
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px; 
+  }
+
+  &__items {
+    margin-top: 20px;
+  }
+
+  &__item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  &__checkout {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #5b54d9;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #4a4cbf; 
+    }
+  }
+}
+
 
 .scroll-to-top {
   position: fixed;
